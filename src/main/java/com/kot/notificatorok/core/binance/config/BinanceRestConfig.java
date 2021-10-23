@@ -2,7 +2,7 @@ package com.kot.notificatorok.core.binance.config;
 
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
-import com.kot.notificatorok.provider.SettingsProvider;
+import com.kot.notificatorok.core.provider.SettingsProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

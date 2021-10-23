@@ -1,13 +1,13 @@
-package com.kot.notificatorok.job;
+package com.kot.notificatorok.core.job;
 
 import com.binance.api.client.BinanceApiRestClient;
 import com.binance.api.client.domain.market.Candlestick;
 import com.binance.api.client.domain.market.CandlestickInterval;
 import com.binance.api.client.domain.market.TickerPrice;
-import com.kot.notificatorok.entity.code.Code;
-import com.kot.notificatorok.provider.SettingsProvider;
-import com.kot.notificatorok.service.code.CodeService;
-import com.kot.notificatorok.service.price.PriceService;
+import com.kot.notificatorok.core.entity.code.Code;
+import com.kot.notificatorok.core.provider.SettingsProvider;
+import com.kot.notificatorok.core.service.code.CodeService;
+import com.kot.notificatorok.core.binance.service.price.PriceService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,27 +37,6 @@ public class BinanceFetcherJob {
 
     @Autowired
     private SettingsProvider settingsProvider;
-
-//    @Scheduled(fixedRate = 24000)
-    private void call() {
-        System.out.println();
-        List<TickerPrice> tickerPrices = binanceApiRestClient.getAllPrices();
-        tickerPrices.forEach(tickerPrice -> {
-            String codeName = null;
-            BigDecimal price = BigDecimal.ZERO;
-            try {
-                codeName = tickerPrice.getSymbol();
-                Code code = codeService.get(codeName);
-                price = new BigDecimal( tickerPrice.getPrice() );
-                LOGGER.info("Saved price: {}", price);
-                priceService.save(code,
-                        price.toBigInteger(),
-                        LocalDateTime.now());
-            } catch (Exception e) {
-                LOGGER.error("Code: {}, Prise: {}, Exception: {}", codeName, price, e.getMessage());
-            }
-        });
-    }
 
     @Scheduled(fixedRate = 24000)
     private void getPrice() {

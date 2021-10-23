@@ -1,7 +1,7 @@
-package com.kot.notificatorok.service.code;
+package com.kot.notificatorok.core.service.code;
 
-import com.kot.notificatorok.entity.code.Code;
-import com.kot.notificatorok.repository.code.CodeRepository;
+import com.kot.notificatorok.core.entity.code.Code;
+import com.kot.notificatorok.core.repository.code.CodeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

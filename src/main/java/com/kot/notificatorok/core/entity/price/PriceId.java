@@ -1,10 +1,9 @@
-package com.kot.notificatorok.entity.price;
+package com.kot.notificatorok.core.entity.price;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 

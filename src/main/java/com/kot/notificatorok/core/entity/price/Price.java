@@ -1,6 +1,6 @@
-package com.kot.notificatorok.entity.price;
+package com.kot.notificatorok.core.entity.price;
 
-import com.kot.notificatorok.entity.code.Code;
+import com.kot.notificatorok.core.entity.code.Code;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 

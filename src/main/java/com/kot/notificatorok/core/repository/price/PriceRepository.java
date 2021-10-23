@@ -1,8 +1,8 @@
-package com.kot.notificatorok.repository.price;
+package com.kot.notificatorok.core.repository.price;
 
-import com.kot.notificatorok.entity.code.Code;
-import com.kot.notificatorok.entity.price.Price;
-import com.kot.notificatorok.entity.price.PriceId;
+import com.kot.notificatorok.core.entity.code.Code;
+import com.kot.notificatorok.core.entity.price.Price;
+import com.kot.notificatorok.core.entity.price.PriceId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
