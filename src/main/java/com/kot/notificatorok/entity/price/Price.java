@@ -13,7 +13,7 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 @Entity
@@ -33,7 +33,7 @@ public class Price {
     private LocalDateTime time;
 
     @Column(name = "val", precision = 10, scale = 7)
-    private BigDecimal val;
+    private BigInteger val;
 
     public Code getCode() {
         return code;
@@ -51,11 +51,11 @@ public class Price {
         this.time = time;
     }
 
-    public BigDecimal getVal() {
+    public BigInteger getVal() {
         return val;
     }
 
-    public void setVal(BigDecimal val) {
+    public void setVal(BigInteger val) {
         this.val = val;
     }
 

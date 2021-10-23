@@ -1,4 +1,4 @@
-package com.kot.notificatorok.repository;
+package com.kot.notificatorok.repository.code;
 
 import com.kot.notificatorok.entity.code.Code;
 import org.springframework.data.jpa.repository.JpaRepository;

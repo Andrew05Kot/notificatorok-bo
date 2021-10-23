@@ -1,4 +1,4 @@
-package com.kot.notificatorok.repository;
+package com.kot.notificatorok.repository.price;
 
 import com.kot.notificatorok.entity.code.Code;
 import com.kot.notificatorok.entity.price.Price;
@@ -14,6 +14,8 @@ import java.util.Optional;
 public interface PriceRepository extends JpaRepository<Price, PriceId> {
 
     List<Price> findAllByTimeLessThan(LocalDateTime time);
+
+    void deleteAllByTimeLessThan(LocalDateTime time);
 
     Optional<Price> findFirstByCodeOrderByTimeDesc(Code code);
 
